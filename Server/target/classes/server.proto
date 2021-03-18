@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_package = "proto";
+
+service ClientDataService {
+  rpc getClientData (DataReceived) returns (ServerResponse) {}
+}
+
+message DataReceived {
+  string name = 1;
+  string cnp = 2;
+}
+
+message ServerResponse {
+  string response = 1;
+}
